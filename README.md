@@ -5,6 +5,8 @@ Enhancing api functionality:
 I would've liked to implement a functionality that translates the text from the
 base language to another using the npm package google-translate.
 The user would've chose which language he wants from a dropdown menu.
+
+
 Explaining the API:
 The modules:
 Express: for creating the web server
@@ -21,9 +23,13 @@ found out that is faster since it doesn’t render websites and I could traverse
 DOM and manipulate elements with Cheerio. Another thing that convinced me
 to use Cheerio is that I watched a video that said something like “is better to use
 Cheerio is you have static websites like a blog site”.
+
+
 Middleware
  I’ve got 2 middleware functions for parsing incoming JSON and HTTP request
 and one for parsing URL encoded data in HTTP request.
+
+
 Functions
 In the application I have 2 functions for the tasks.
 The main function that builds the page named ‘buildPage()’ is responsible for
@@ -43,8 +49,11 @@ slug(for example: 'the-radiant-days-of-summer'). Finally, I use fs method to
 write the html content of the stringToHtml to a file named index.html and if it
 was an error I log the error, if it was a success, I log in the terminal that it was
 written successfully.
+
 The second function takes an input as a parameter, it splits the text into words
 using whitespaces as the delimiter and it returns the count of words in the text.
+
+
 Routes
 The route for scraping ‘/scrape’
  In the application, I have a route for scraping, that is listening for http POST
@@ -64,6 +73,7 @@ where I stored the link of the app(https://wsa-test.vercel.app/). If what is
 above worked, it generates an “index.html” file using the buildPage function
 with the scraped data and after generating the file, it sends the file as a response
 to the client/browser and display the generated html page.
+
 The default route ‘/’
 When a GET request is made to the root url (https://wsa-test.vercel.app/) this
 route is triggered and it servers the “index.html” file to the client in response to

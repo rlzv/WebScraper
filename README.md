@@ -39,3 +39,23 @@ The default route ‘/’
 When a GET request is made to the root url (https://wsa-test.vercel.app/) this
 route is triggered and it servers the “index.html” file to the client in response to
 the GET request, allowing to acces the generated html page.
+
+Guide how to run the application:
+Take the code from the github repository: https://github.com/rlzv/WebScraper
+and after unzip it, enter the terminal and install the modules using npm i. After
+that, in the directory project use nodemon index.js in order to start the server
+and navigate to http://localhost:3000/ on browser.
+Open the Postman for example to make a post request in order to see the data.
+After typing into the input the URL http://localhost:3000/scrape in order to
+access the endpoint and in the body for example:
+{
+ "url": "https://wsa-test.vercel.app/blog/the-radiant-days-of-summer"
+}
+You could also change that value string inside url to test the other blog pages:
+https://wsa-test.vercel.app/blog/the-joys-of-gardening
+https://wsa-test.vercel.app/blog/the-challenges-of-urban-living
+https://wsa-test.vercel.app/blog/the-radiant-days-of-summer
+https://wsa-test.vercel.app/blog/neutral-observations-on-modern-art
+https://wsa-test.vercel.app/blog/the-disappointing-reality-of-junk-food
+After sending the POST request from Postman, on the localhost on browser you
+will see the scraped data.
